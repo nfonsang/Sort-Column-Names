@@ -1,0 +1,39 @@
+// This file is the descriptor for the Custom code recipe sort-column-names-any-dataset
+{
+    "meta": {
+
+        "label": "Sort Column Names for any DSS Dataset",
+        "description": "This recipe sorts the column names of any DSS dataset",
+        "icon": "icon-list-ol"
+    },
+
+    "kind": "PYTHON",
+    
+    "selectableFromDataset": "input_dataset",
+    "inputRoles": [
+        {
+            "name": "input_dataset",
+            "label": "Input Dataset",
+            "description": "Dataset with column names to be sorted",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+    "outputRoles": [
+        {
+            "name": "output_dataset",
+            "label": "Output Dataset",
+            "description": "Dataset with sorted column names",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+// No parameters defined because they are not needed\
+    
+    "resourceKeys": []
+
+}

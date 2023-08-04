@@ -1,0 +1,50 @@
+// This file is the descriptor for the Custom code recipe sort-column-names-sql-dataset
+{
+    "meta": {
+
+        "label": "Sort Column Names - BigQuery Datasets Only",
+        "description": "This recipe sorts the column names of SQL datasets",
+        "icon": "icon-table"
+    },
+
+    "kind": "PYTHON",
+    
+    "selectableFromDataset": "input_dataset",
+    "inputRoles": [
+        {
+            "name": "input_dataset",
+            "label": "Input Dataset",
+            "description": "Dataset with column names to be sorted",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true,
+            'mustBeSQL': true
+        }
+    ],
+
+    "outputRoles": [
+        {
+            "name": "output_dataset",
+            "label": "Output Dataset",
+            "description": "Dataset with sorted column names",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+// parameters
+    "params": [
+
+        {
+            "name": "bigqery_table_name",
+            "label": "BigQuery Input Table Name",
+            "type": "STRING",
+            "description": "Optional: Enter the name of the input BigQuery Table if not projectkey_dss-dataset-name (see input dataset settings).",
+            "mandatory": false
+
+        }
+        ],
+    "resourceKeys": []
+
+}
